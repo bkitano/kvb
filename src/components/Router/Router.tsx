@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
 
-import HomePage from "../HomePage";
+import { HomePage } from "../HomePage";
 import AdminPage from "../AdminPage";
 import UserPage from "../UserPage";
 import NotFoundPage from "../NotFoundPage";
@@ -30,8 +30,8 @@ class Router extends Component {
             {user && roles.includes("admin") ? (
               <AdminPage />
             ) : (
-              <Redirect to="/" />
-            )}
+                <Redirect to="/" />
+              )}
           </Route>
 
           <Route path="/user/:userId">
