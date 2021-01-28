@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Box, Typography } from "@material-ui/core";
 
-function EmptyState(props) {
+const EmptyState = (props) => {
   let imageWidth;
   let imageHeight;
   let variant;
@@ -122,4 +122,4 @@ EmptyState.propTypes = {
   button: PropTypes.element,
 };
 
-export default EmptyState;
+export { EmptyState };

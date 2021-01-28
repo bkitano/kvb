@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import EmptyState from "../EmptyState";
+import { EmptyState } from "../../EmptyState";
 
 class AdminPage extends Component {
   render() {

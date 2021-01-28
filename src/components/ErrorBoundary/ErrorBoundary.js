@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import * as Sentry from "@sentry/browser";
 
-import EmptyState from "../EmptyState";
+import { EmptyState } from "../EmptyState";
 
 import { ReactComponent as ErrorIllustration } from "../../illustrations/error.svg";
 

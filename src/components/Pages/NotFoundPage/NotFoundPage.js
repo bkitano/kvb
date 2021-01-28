@@ -6,9 +6,9 @@ import { Fab, Box } from "@material-ui/core";
 
 import { Home as HomeIcon } from "@material-ui/icons";
 
-import EmptyState from "../EmptyState";
+import { EmptyState } from "../../EmptyState";
 
-import { ReactComponent as NotFoundIllustration } from "../../illustrations/not-found.svg";
+import { ReactComponent as NotFoundIllustration } from "../../../illustrations/not-found.svg";
 
 class NotFoundPage extends Component {
   render() {
