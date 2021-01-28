@@ -26,6 +26,11 @@ class Router extends Component {
             <HomePage user={user} openSnackbar={openSnackbar} />
           </Route>
 
+          <Route path='/test' exact><div>
+            <object type="text/html" data="http://validator.w3.org/" width="800px" height="600px" >
+            </object>
+          </div></Route>
+
           <Route path="/admin">
             {user && roles.includes("admin") ? (
               <AdminPage />
