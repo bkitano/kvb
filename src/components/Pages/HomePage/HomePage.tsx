@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import { Typography } from '@material-ui/core'
-import { isUndefined } from 'lodash';
+import { isEmpty } from 'lodash';
 
 import { auth } from "../../../firebase";
 import authentication from "../../../services/authentication";
 import { EmptyState } from "../../EmptyState";
-import { Item } from '../../Item';
 
 import { ReactComponent as CabinIllustration } from "../../../illustrations/cabin.svg";
 import { ReactComponent as InsertBlockIllustration } from "../../../illustrations/insert-block.svg";
+import { ItemsPage } from "../ItemsPage/ItemsPage";
 
 const signInWithEmailLink = (props) => {
   const { user } = props;
@@ -67,23 +65,25 @@ const signInWithEmailLink = (props) => {
   }
 };
 
-const HomePageView = (props) => {
+const HomePageView = (props: any) => {
   const { user } = props;
 
   useEffect(() => {
     signInWithEmailLink(props)
   })
 
-  const component = isUndefined(user) ?
+  const component = isEmpty(user) ?
     <EmptyState
       image={<InsertBlockIllustration />}
       title="RMUIF"
       description="Supercharged version of Create React App with all the bells and whistles."
-    /> : <EmptyState
-      image={<CabinIllustration />}
-      title="Home"
-      description="This is the home page. You can edit it from HomePage.js."
-    />
+    /> : <ItemsPage items={[
+      {
+        name: 'asdf',
+        price: 30,
+        image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/1.jpg'
+      }
+    ]} />
 
   return component;
 }
