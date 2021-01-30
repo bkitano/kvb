@@ -9,6 +9,7 @@ import { EmptyState } from "../../EmptyState";
 import { ReactComponent as CabinIllustration } from "../../../illustrations/cabin.svg";
 import { ReactComponent as InsertBlockIllustration } from "../../../illustrations/insert-block.svg";
 import { ItemsPage } from "../ItemsPage/ItemsPage";
+import { Container } from "@material-ui/core";
 
 const signInWithEmailLink = (props) => {
   const { user } = props;
@@ -82,10 +83,23 @@ const HomePageView = (props: any) => {
         name: 'asdf',
         price: 30,
         image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/1.jpg'
-      }
+      },
+      {
+        name: 'asdf',
+        price: 30,
+        image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/2.jpg'
+      },
+      // {
+      //   name: 'asdf',
+      //   price: 30,
+      //   image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/3.jpg'
+      // },
     ]} />
 
-  return component;
+  return <Container>
+
+    {component}
+  </Container>
 }
 
 const HomePage = withRouter(HomePageView);

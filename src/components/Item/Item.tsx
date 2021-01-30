@@ -11,10 +11,13 @@ type Item = {
 const useStyles = makeStyles({
 
     card: {
-        width: '20rem',
+        // float: 'left',
+        // width: '40rem',
+        margin: '1rem',
+        // maxWidth: '150px',
     },
     image: {
-        height: '20rem'
+        height: '10rem',
     }
 
 });
