@@ -23,7 +23,7 @@ import {
 
 import { Close as CloseIcon } from "@material-ui/icons";
 
-import AuthProviderList from "../../AuthProviderList";
+import { AuthProviderList } from "../../Resources/AuthProviderList";
 
 import constraints from "../../../data/constraints";
 import authentication from "../../../services/authentication";

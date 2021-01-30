@@ -10,11 +10,11 @@ import { auth, firestore } from "../../firebase";
 import authentication from "../../services/authentication";
 import appearance from "../../services/appearance";
 
-import ErrorBoundary from "../ErrorBoundary";
-import LaunchScreen from "../LaunchScreen";
-import Bar from "../Bar";
-import Router from "../Router";
-import DialogHost from "../DialogHost";
+import ErrorBoundary from "../Resources/ErrorBoundary";
+import LaunchScreen from "../Resources/LaunchScreen";
+import Bar from "../Modules/Bar";
+import Router from "../Resources/Router";
+import DialogHost from "../Resources/DialogHost";
 
 const initialState = {
   ready: false,

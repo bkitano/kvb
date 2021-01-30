@@ -10,10 +10,10 @@ import { Refresh as RefreshIcon, Home as HomeIcon } from "@material-ui/icons";
 
 import { firestore } from "../../../firebase";
 
-import { EmptyState } from "../../EmptyState";
+import { EmptyState } from "../../Resources/EmptyState";
 
-import Loader from "../../Loader";
-import UserCard from "../../UserCard";
+import Loader from "../../Resources/Loader";
+import UserCard from "../../Modules/UserCard";
 
 import { ReactComponent as ErrorIllustration } from "../../../illustrations/error.svg";
 import { ReactComponent as NoDataIllustration } from "../../../illustrations/no-data.svg";

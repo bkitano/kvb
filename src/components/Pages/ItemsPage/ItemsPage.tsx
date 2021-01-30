@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { map } from 'lodash';
 import React from 'react';
 
-import { Item, ItemView } from '../../Item';
+import { Item, ItemView } from '../../Modules/Item';
 
 type ItemsPageProps = {
     items: Item[];

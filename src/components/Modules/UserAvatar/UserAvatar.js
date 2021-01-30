@@ -11,7 +11,7 @@ import {
   Person as PersonIcon,
 } from "@material-ui/icons";
 
-import authentication from "../../services/authentication";
+import authentication from "../../../services/authentication";
 
 const styles = (theme) => ({
   nameInitials: {

@@ -1,1 +1,1 @@
-export { default } from "./AuthProviderList";
+export { AuthProviderList } from "./AuthProviderList";

@@ -4,7 +4,7 @@ import { isEmpty } from 'lodash';
 
 import { auth } from "../../../firebase";
 import authentication from "../../../services/authentication";
-import { EmptyState } from "../../EmptyState";
+import { EmptyState } from "../../Resources/EmptyState";
 
 import { ReactComponent as InsertBlockIllustration } from "../../../illustrations/insert-block.svg";
 import { ItemsPage } from "../ItemsPage/ItemsPage";

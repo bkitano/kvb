@@ -6,7 +6,7 @@ import { Fab, Box } from "@material-ui/core";
 
 import { Home as HomeIcon } from "@material-ui/icons";
 
-import { EmptyState } from "../../EmptyState";
+import { EmptyState } from "../../Resources/EmptyState";
 
 import { ReactComponent as NotFoundIllustration } from "../../../illustrations/not-found.svg";
 

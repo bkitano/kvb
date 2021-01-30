@@ -6,6 +6,8 @@ import validate from "validate.js";
 
 import { withStyles } from "@material-ui/core/styles";
 
+import { AuthProviderList } from '../../Resources/AuthProviderList';
+
 import {
   Dialog,
   DialogTitle,
@@ -23,10 +25,8 @@ import {
 
 import { Close as CloseIcon } from "@material-ui/icons";
 
-import AuthProviderList from "../AuthProviderList";
-
-import constraints from "../../data/constraints";
-import authentication from "../../services/authentication";
+import constraints from "../../../data/constraints";
+import authentication from "../../../services/authentication";
 
 const styles = (theme) => ({
   closeButton: {
