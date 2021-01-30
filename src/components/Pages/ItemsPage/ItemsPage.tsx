@@ -11,8 +11,6 @@ type ItemsPageProps = {
 
 const useStyles = makeStyles({
     container: {
-        margin: 0,
-        width: '100%'
     },
 })
 

@@ -24,9 +24,9 @@ import {
 
 import SwipeableViews from "react-swipeable-views";
 
-import AccountTab from "../../AccountTab";
-import AppearanceTab from "../../AppearanceTab";
-import LinksTab from "../../LinksTab";
+import AccountTab from "../../Tabs/AccountTab";
+import AppearanceTab from "../../Tabs/AppearanceTab";
+import LinksTab from "../../Tabs/LinksTab";
 import SecurityTab from "../../Tabs/SecurityTab";
 
 const styles = (theme) => ({

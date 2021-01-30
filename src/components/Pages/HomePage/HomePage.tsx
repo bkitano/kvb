@@ -9,6 +9,7 @@ import { EmptyState } from "../../Resources/EmptyState";
 import { ReactComponent as InsertBlockIllustration } from "../../../illustrations/insert-block.svg";
 import { ItemsPage } from "../ItemsPage/ItemsPage";
 import { Container } from "@material-ui/core";
+import { BoutiqueHeader } from "../../Modules/BoutiqueHeader";
 
 const signInWithEmailLink = (props) => {
   const { user } = props;
@@ -77,23 +78,25 @@ const HomePageView = (props: any) => {
       image={<InsertBlockIllustration />}
       title="RMUIF"
       description="Supercharged version of Create React App with all the bells and whistles."
-    /> : <ItemsPage items={[
-      {
-        name: 'asdf',
-        price: 30,
-        image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/1.jpg'
-      },
-      {
-        name: 'asdf',
-        price: 30,
-        image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/2.jpg'
-      },
-      {
-        name: 'asdf',
-        price: 30,
-        image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/3.jpg'
-      },
-    ]} />
+    /> : <>
+      <BoutiqueHeader name='HatStore.io' image='https://www.macworld.co.uk/cmsdata/features/3792765/apple_logo_thumb1200_4-3.jpg' />
+      <ItemsPage items={[
+        {
+          name: 'asdf',
+          price: 30,
+          image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/1.jpg'
+        },
+        {
+          name: 'asdf',
+          price: 30,
+          image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/2.jpg'
+        },
+        {
+          name: 'asdf',
+          price: 30,
+          image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/3.jpg'
+        },
+      ]} /></>
 
   return <Container>
 

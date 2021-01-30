@@ -27,7 +27,7 @@ import {
   FormatColorReset as FormatColorResetIcon,
 } from "@material-ui/icons";
 
-import appearance from "../../services/appearance";
+import appearance from "../../../services/appearance";
 
 class AppearanceTab extends Component {
   constructor(props) {

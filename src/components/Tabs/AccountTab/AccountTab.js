@@ -44,8 +44,8 @@ import {
   DeleteForever as DeleteForeverIcon,
 } from "@material-ui/icons";
 
-import constraints from "../../data/constraints";
-import authentication from "../../services/authentication";
+import constraints from "../../../data/constraints";
+import authentication from "../../../services/authentication";
 
 const styles = (theme) => ({
   dialogContent: {
