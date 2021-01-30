@@ -24,10 +24,10 @@ import {
 
 import SwipeableViews from "react-swipeable-views";
 
-import AccountTab from "../AccountTab";
-import AppearanceTab from "../AppearanceTab";
-import LinksTab from "../LinksTab";
-import SecurityTab from "../SecurityTab";
+import AccountTab from "../../AccountTab";
+import AppearanceTab from "../../AppearanceTab";
+import LinksTab from "../../LinksTab";
+import SecurityTab from "../../SecurityTab";
 
 const styles = (theme) => ({
   closeButton: {

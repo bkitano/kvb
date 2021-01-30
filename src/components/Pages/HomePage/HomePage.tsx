@@ -6,7 +6,6 @@ import { auth } from "../../../firebase";
 import authentication from "../../../services/authentication";
 import { EmptyState } from "../../EmptyState";
 
-import { ReactComponent as CabinIllustration } from "../../../illustrations/cabin.svg";
 import { ReactComponent as InsertBlockIllustration } from "../../../illustrations/insert-block.svg";
 import { ItemsPage } from "../ItemsPage/ItemsPage";
 import { Container } from "@material-ui/core";
@@ -89,11 +88,11 @@ const HomePageView = (props: any) => {
         price: 30,
         image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/2.jpg'
       },
-      // {
-      //   name: 'asdf',
-      //   price: 30,
-      //   image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/3.jpg'
-      // },
+      {
+        name: 'asdf',
+        price: 30,
+        image: 'https://ak.picdn.net/shutterstock/videos/19990843/thumb/3.jpg'
+      },
     ]} />
 
   return <Container>

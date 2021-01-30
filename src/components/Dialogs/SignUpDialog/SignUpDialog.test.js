@@ -1,27 +1,22 @@
 import React from "react";
 
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
-import AccountTab from "./AccountTab";
+import SignUpDialog from "./SignUpDialog";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
 
   ReactDOM.render(
-    <AccountTab
+    <SignUpDialog
       dialogProps={{
         open: true,
 
         onClose: () => {},
       }}
-      user={{
-        metadata: {
-          lastSignInTime: 0,
-        },
-      }}
-      userData={{}}
+      signUp={() => {}}
       openSnackbar={() => {}}
-      onDeleteAccountClick={() => {}}
+      onAuthProviderClick={() => {}}
     />,
     div
   );

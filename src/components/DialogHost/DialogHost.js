@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 
 import { Hidden } from "@material-ui/core";
 
-import AboutDialog from "../AboutDialog";
+import AboutDialog from "../Dialogs/AboutDialog";
 
 import SignUpDialog from "../SignUpDialog";
-import SignInDialog from "../SignInDialog";
-import SettingsDialog from "../SettingsDialog";
-import DeleteAccountDialog from "../DeleteAccountDialog";
-import AlertDialog from "../AlertDialog";
+import SignInDialog from "../Dialogs/SignInDialog";
+import SettingsDialog from "../Dialogs/SettingsDialog";
+import DeleteAccountDialog from "../Dialogs/DeleteAccountDialog";
+import AlertDialog from "../Dialogs/AlertDialog";
 
 class DialogHost extends Component {
   render() {
