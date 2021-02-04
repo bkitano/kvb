@@ -79,7 +79,7 @@ const HomePageView = (props: any) => {
       title="RMUIF"
       description="Supercharged version of Create React App with all the bells and whistles."
     /> : <>
-      <BoutiqueHeader name='HatStore.io' image='https://www.macworld.co.uk/cmsdata/features/3792765/apple_logo_thumb1200_4-3.jpg' />
+      <BoutiqueHeader name='James Charles' image='https://www.macworld.co.uk/cmsdata/features/3792765/apple_logo_thumb1200_4-3.jpg' />
       <ItemsPage items={[
         {
           name: 'asdf',

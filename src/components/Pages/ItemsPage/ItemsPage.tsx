@@ -23,7 +23,7 @@ const ItemsPage = (props: ItemsPageProps) => {
     return <Grid container justify='center' spacing={2} className={classes.container}>
         {map(items, (item: Item, key) => {
             return (
-                <Grid item xs key={key} >
+                <Grid item xs={12} sm={6} md={4} key={key} >
                     <ItemView {...item} />
                 </Grid>
             )

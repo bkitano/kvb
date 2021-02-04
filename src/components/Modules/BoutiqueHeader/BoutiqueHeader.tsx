@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 })
 
 const BoutiqueHeader = (props: BoutiqueHeaderProps) => {
-    const { name, image, subheader } = props;
+    const { name, image } = props;
     const classes = useStyles();
 
     return (
