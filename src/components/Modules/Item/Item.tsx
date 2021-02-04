@@ -1,11 +1,12 @@
-import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Link, Typography } from '@material-ui/core';
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 
 type Item = {
     name: string,
-    price: number,
+    price?: number,
     image: string,
+    link: string,
 }
 
 const useStyles = makeStyles({
@@ -24,17 +25,19 @@ const useStyles = makeStyles({
 
 const ItemView = (props: Item) => {
 
-    const { name, price, image } = props;
+    const { name, price, image, link } = props;
 
     const classes = useStyles();
 
     return (
         <Card className={classes.card}>
             <CardMedia image={image} className={classes.image} />
-            <CardContent>
-                <Typography variant='h5'>{name}</Typography>
-                <Typography variant='h6'>${price}</Typography>
-            </CardContent>
+            <Link component='a' href={link}>
+                <CardContent>
+                    <Typography variant='h5'>{name}</Typography>
+                    {price && <Typography variant='h6'>${price}</Typography>}
+                </CardContent>
+            </Link>
         </Card>
     )
 }
