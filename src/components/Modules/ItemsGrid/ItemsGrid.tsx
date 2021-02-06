@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import { map } from 'lodash';
 import React from 'react';
 
-import { Item, ItemView } from '../../Modules/Item';
+import { Item, ItemView } from '../Item';
 
-type ItemsPageProps = {
+type ItemsGridProps = {
     items: Item[];
 }
 
@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     },
 })
 
-const ItemsPage = (props: ItemsPageProps) => {
+const ItemsGrid = (props: ItemsGridProps) => {
 
     const { items } = props;
 
@@ -23,7 +23,7 @@ const ItemsPage = (props: ItemsPageProps) => {
     return <Grid container justify='center' spacing={2} className={classes.container}>
         {map(items, (item: Item, key) => {
             return (
-                <Grid item xs={12} sm={6} md={4} key={key} >
+                <Grid item xs={12} sm={10} md={8} key={key} >
                     <ItemView {...item} />
                 </Grid>
             )
@@ -31,4 +31,4 @@ const ItemsPage = (props: ItemsPageProps) => {
     </Grid>
 }
 
-export { ItemsPage, ItemsPageProps }
+export { ItemsGrid, ItemsGridProps }

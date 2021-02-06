@@ -1,1 +1,2 @@
-export { BoutiqueHeader } from './BoutiqueHeader';
+export * from './BoutiqueHeader';
+export * from './mockBoutiqueHeader';

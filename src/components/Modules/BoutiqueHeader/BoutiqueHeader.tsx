@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 type BoutiqueHeaderProps = {
     name: string,
-    image: string,
+    image?: string,
 }
 
 const useStyles = makeStyles({
@@ -20,9 +20,9 @@ const BoutiqueHeader = (props: BoutiqueHeaderProps) => {
 
     return (
         <Grid direction='row' container alignItems='center' spacing={0} justify='flex-start' className={classes.header}>
-            <Grid item xs={1}>
+            {image && <Grid item xs={1}>
                 <Avatar alt={name} src={image} />
-            </Grid>
+            </Grid>}
             <Grid item >
                 <Typography variant='h4'>{name}</Typography>
             </Grid>
@@ -30,4 +30,4 @@ const BoutiqueHeader = (props: BoutiqueHeaderProps) => {
     )
 }
 
-export { BoutiqueHeader }
+export { BoutiqueHeader, BoutiqueHeaderProps }

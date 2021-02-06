@@ -8,6 +8,7 @@ import { HomePage } from "../../Pages/HomePage";
 import AdminPage from "../../Pages/AdminPage";
 import UserPage from "../../Pages/UserPage";
 import NotFoundPage from "../../Pages/NotFoundPage";
+import { FeedPage } from "../../Pages/FeedPage/FeedPage";
 
 class Router extends Component {
   render() {
@@ -22,8 +23,14 @@ class Router extends Component {
         {bar}
 
         <Switch>
+
+          {/* TODO: become the feed */}
           <Route path="/" exact>
             <HomePage user={user} openSnackbar={openSnackbar} />
+          </Route>
+
+          <Route path="/feed" exact>
+            <FeedPage user={user} openSnackbar={openSnackbar} />
           </Route>
 
           <Route path='/test' exact><div>
@@ -39,9 +46,15 @@ class Router extends Component {
               )}
           </Route>
 
-          <Route path="/user/:userId">
-            {user ? <UserPage /> : <Redirect to="/" />}
+          {/* TODO: to be replaced by route below*/}
+          <Route path="/users/JamesCharles">
+            {user ? <HomePage user={user} openSnackbar={openSnackbar} /> : <Redirect to="/" />}
           </Route>
+
+          {/* TODO: to be switch out when database is wired*/}
+          {/* <Route path="/user/:userId">
+            {user ? <UserPage /> : <Redirect to="/" />}
+          </Route> */}
 
           <Route>
             <NotFoundPage />
