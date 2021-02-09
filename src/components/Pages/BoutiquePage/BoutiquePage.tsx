@@ -80,8 +80,9 @@ const BoutiquePageView = (props: any) => {
       title="RMUIF"
       description="Supercharged version of Create React App with all the bells and whistles."
     /> : <>
-      <BoutiqueHeader name='James Charles' />
-      <ItemsFeed items={mockItems} variant='list'/></>
+      <BoutiqueHeader {...mockBoutiqueHeader} />
+      <ItemsFeed items={mockItems} variant='list'/>
+      </>
 
   return <Container>
     {component}

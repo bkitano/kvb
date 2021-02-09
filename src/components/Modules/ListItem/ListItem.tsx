@@ -9,11 +9,11 @@ const useStyles = makeStyles({
     root: {
         display: 'flex'
     },
-    cover: {
+    image: {
         width: 151,
     },
     content: {
-        width: '100%'
+        width: '100%',
     },
     items: {
         float: 'right'
@@ -29,7 +29,7 @@ const ListItemView = (props: Item) => {
     return (
         <Card className={classes.root}>
             <CardMedia>
-                <img src={image} className={classes.cover} />
+                <img src={image} className={classes.image} />
             </CardMedia>
             <CardHeader title={name} subheader={date} />
             <CardContent >
