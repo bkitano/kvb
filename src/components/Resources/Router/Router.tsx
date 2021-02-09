@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
 
-import { HomePage } from "../../Pages/HomePage";
+import { BoutiquePage } from "../../Pages/BoutiquePage";
 import AdminPage from "../../Pages/AdminPage";
 import UserPage from "../../Pages/UserPage";
 import NotFoundPage from "../../Pages/NotFoundPage";
 import { FeedPage } from "../../Pages/FeedPage/FeedPage";
+import { mockItems } from "../../Modules/SquareItem";
 
 class Router extends Component {
   render() {
@@ -26,7 +27,7 @@ class Router extends Component {
 
           {/* TODO: become the feed */}
           <Route path="/" exact>
-            <HomePage user={user} openSnackbar={openSnackbar} />
+            <FeedPage items={mockItems} user={user} openSnackbar={openSnackbar} />
           </Route>
 
           <Route path="/feed" exact>
@@ -48,7 +49,7 @@ class Router extends Component {
 
           {/* TODO: to be replaced by route below*/}
           <Route path="/users/JamesCharles">
-            {user ? <HomePage user={user} openSnackbar={openSnackbar} /> : <Redirect to="/" />}
+            {user ? <BoutiquePage user={user} openSnackbar={openSnackbar} /> : <Redirect to="/" />}
           </Route>
 
           {/* TODO: to be switch out when database is wired*/}

@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     },
 });
 
-const ItemView = (props: Item & ItemHeader) => {
+const SquareItemView = (props: Item & ItemHeader) => {
 
     const { name, price, image, link, source, date, avatar, showHeader } = props;
 
@@ -68,4 +68,4 @@ const ItemView = (props: Item & ItemHeader) => {
     )
 }
 
-export { ItemView, Item }
+export { SquareItemView, Item }

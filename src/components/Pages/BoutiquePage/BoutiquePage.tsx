@@ -7,10 +7,10 @@ import authentication from "../../../services/authentication";
 import { EmptyState } from "../../Resources/EmptyState";
 
 import { ReactComponent as InsertBlockIllustration } from "../../../illustrations/insert-block.svg";
-import { ItemsGrid } from "../../Modules/ItemsGrid/ItemsGrid";
+import { ItemsFeed } from "../../Modules/ItemsFeed/ItemsFeed";
 import { Container } from "@material-ui/core";
 import { BoutiqueHeader, mockBoutiqueHeader } from "../../Modules/BoutiqueHeader";
-import { mockItems } from "../../Modules/Item";
+import { mockItems } from "../../Modules/SquareItem";
 
 const signInWithEmailLink = (props) => {
   const { user } = props;
@@ -67,7 +67,7 @@ const signInWithEmailLink = (props) => {
   }
 };
 
-const HomePageView = (props: any) => {
+const BoutiquePageView = (props: any) => {
   const { user } = props;
 
   useEffect(() => {
@@ -80,14 +80,14 @@ const HomePageView = (props: any) => {
       title="RMUIF"
       description="Supercharged version of Create React App with all the bells and whistles."
     /> : <>
-      <BoutiqueHeader {...mockBoutiqueHeader}/>
-      <ItemsGrid items={mockItems} /></>
+      <BoutiqueHeader name='James Charles' />
+      <ItemsFeed items={mockItems} variant='list'/></>
 
   return <Container>
     {component}
   </Container>
 }
 
-const HomePage = withRouter(HomePageView);
+const BoutiquePage = withRouter(BoutiquePageView);
 
-export { HomePage };
+export { BoutiquePage };

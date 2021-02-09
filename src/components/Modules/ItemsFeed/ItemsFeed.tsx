@@ -3,10 +3,12 @@ import { makeStyles } from '@material-ui/core/styles'
 import { map } from 'lodash';
 import React from 'react';
 
-import { Item, ItemView } from '../Item';
+import { SquareItemView, Item } from '../SquareItem';
+import { ListItemView } from '../ListItem';
 
-type ItemsGridProps = {
+type ItemsFeedProps = {
     items: Item[];
+    variant: 'feed' | 'list';
 }
 
 const useStyles = makeStyles({
@@ -14,21 +16,23 @@ const useStyles = makeStyles({
     },
 })
 
-const ItemsGrid = (props: ItemsGridProps) => {
+const ItemsFeed = (props: ItemsFeedProps) => {
 
-    const { items } = props;
+    const { items, variant } = props;
 
     const classes = useStyles();
 
     return <Grid container justify='center' spacing={2} className={classes.container}>
-        {map(items, (item: Item, key) => {
+        { map(items, (item: Item, key) => {
             return (
                 <Grid item xs={12} sm={10} md={8} key={key} >
-                    <ItemView {...item} />
+                    {variant === 'feed' ? 
+                        <SquareItemView {...item} /> : 
+                        <ListItemView {...item}/>}
                 </Grid>
             )
         })}
     </Grid>
 }
 
-export { ItemsGrid, ItemsGridProps }
+export { ItemsFeed, ItemsFeedProps }
